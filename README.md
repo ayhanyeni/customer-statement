@@ -1,6 +1,6 @@
-# Rabobank Customer Statement Processor
+# Transaction Processor
 
-Rabobank Customer Statement Processor application evaluates a customer statement records file for validity and reports invalid records. 
+Transaction Processor application evaluates a customer statement records file for validity and reports invalid records. 
 For evaluation of the records, correctness of end balance values and uniqueness of reference ids are checked.
 
 
@@ -37,7 +37,7 @@ mvn test -Dtest='**/*IT'
   types can be introduced in the future. So, factory method design pattern is used to create and use the correct 
   file parser during the process run.
 
-* _Very big customer statement files shall be supported:_ Monthly customer statement records of Rabobank could be too big.
+* _Too big customer statement files shall be supported:_ Monthly customer statement records of Rabobank could be too big.
   Reading all the records in the input file to the memory and run the validity check could limit the maximum 
   size of input files the application can process. So, it is preferred to read and evaluate the records in the input files 
   in a streamed way. Reading the records in '.csv' files line by line in a streamed way is achieved using FileReader 

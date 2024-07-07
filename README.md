@@ -1,15 +1,17 @@
-# Transaction Processor
+# Transaction Analyzer
 
-Transaction Processor application evaluates a customer statement records file for validity and reports invalid records. 
-For evaluation of the records, correctness of end balance values and uniqueness of reference ids are checked.
+Transaction Analyzer application evaluates a statement records file for validity and reports invalid records. 
+For evaluation of the records, correctness of end balance values and uniqueness of reference ids are checked. 
+
+This project is developed as a sample spring boot 3 application.
 
 
 Run the below command to start the application.
 
 ```sh
-java -jar customer-statement-processor<version>.jar <customer_statement_records_file>
+java -jar statement-analyzer-<version>.jar <file>
 ```
-The 'customer_statement_records_file' parameter is the path to the customer statement records file. 
+The 'file' parameter is the path to the statement records file. 
 The file name has to have '.csv' or '.xml' extension.
 
 ## Unit and Integration Tests
